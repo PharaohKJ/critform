@@ -31,7 +31,10 @@ element.submit
 driver.save_screenshot './confirm.png'
 `open ./confirm.png`
 
-return if ARGV[0] != 'CONFIRM'
+if ARGV[0] != 'CONFIRM'
+  puts 'if OK then to add **CONFIRM** parameter ex) bundle exec ruby main.rb CONFIRM'
+  return
+end
 
 element = driver.find_element(:name, 'ENQFORM')
 element.submit
