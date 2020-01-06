@@ -6,4 +6,5 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 gem 'selenium-webdriver'
-gem 'chromedriver-helper'
+# gem 'chromedriver-helper'
+gem 'webdrivers', '~> 4.0'

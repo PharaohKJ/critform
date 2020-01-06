@@ -12,7 +12,7 @@ driver = Selenium::WebDriver.for :chrome, options: options
 url = 'https://www4.city.kanazawa.lg.jp/17021/bp/salon_s.html'
 driver.navigate.to url
 
-y = YAML.load_file('./inputs.yml')
+y = YAML.load_file(ARGV[0] || './inputs.yml')
 
 y.each do |k, v|
   if v['t'] == 'text'
@@ -31,7 +31,7 @@ element.submit
 driver.save_screenshot './confirm.png'
 `open ./confirm.png`
 
-if ARGV[0] != 'CONFIRM'
+if ARGV[1] != 'CONFIRM'
   puts 'if OK then to add **CONFIRM** parameter ex) bundle exec ruby main.rb CONFIRM'
   return
 end
