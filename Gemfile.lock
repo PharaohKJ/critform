@@ -3,7 +3,7 @@ GEM
   specs:
     childprocess (3.0.0)
     mini_portile2 (2.4.0)
-    nokogiri (1.10.7)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     rubyzip (2.0.0)
     selenium-webdriver (3.142.7)
